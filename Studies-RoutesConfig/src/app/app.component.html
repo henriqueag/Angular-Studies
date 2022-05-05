@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Configuração de rotas</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+            <li><a [routerLink]="['/cursos']" routerLinkActive="active">Cursos</a></li>
+            <li><a [routerLink]="['/home']" routerLinkActive="active">JavaScript</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
