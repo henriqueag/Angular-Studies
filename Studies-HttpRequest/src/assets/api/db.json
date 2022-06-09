@@ -1,0 +1,217 @@
+{
+    "pacientes": [
+        {
+            "id": 1,
+            "nome": "Benedito João Aragão",
+            "cpf": "723.286.426-40",
+            "data_nascimento": "20/07/1968"
+        },
+        {
+            "id": 2,
+            "nome": "Elisa Elza Isabella",
+            "cpf": "710.003.426-46",
+            "data_nascimento": "15/07/1995"
+        },
+        {
+            "id": 3,
+            "nome": "Evelyn Aparecida Eloá",
+            "cpf": "061.482.006-51",
+            "data_nascimento": "29/03/1958"
+        },
+        {
+            "id": 4,
+            "nome": "Martin Leonardo Eduardo Costa",
+            "cpf": "585.660.286-27",
+            "data_nascimento": "22/02/1981"
+        },
+        {
+            "id": 5,
+            "nome": "Miguel Caleb Enrico Rezende",
+            "cpf": "572.255.226-71",
+            "data_nascimento": "19/02/1972"
+        },
+        {
+            "id": 6,
+            "nome": "Simone Ester Rita Freitas",
+            "cpf": "356.682.326-03",
+            "data_nascimento": "29/09/1966"
+        },
+        {
+            "id": 7,
+            "nome": "Agatha Maria",
+            "cpf": "356.263.306-82",
+            "data_nascimento": "16/05/1985"
+        },
+        {
+            "id": 8,
+            "nome": "Daniel Matheus Monteiro",
+            "cpf": "627.651.816-67",
+            "data_nascimento": "29/04/1983"
+        },
+        {
+            "id": 9,
+            "nome": "Diogo Juan Pietro da Silva",
+            "cpf": "064.020.056-73",
+            "data_nascimento": "08/07/1964"
+        },
+        {
+            "id": 10,
+            "nome": "Vinicius Enrico Joaquim Ribeiro",
+            "cpf": "758.864.456-76",
+            "data_nascimento": "17/08/1975"
+        }
+    ],
+    "areas_medicas": [
+        {
+            "id": 1,
+            "especialidade": "DERMATOLOGIA",
+            "descricao": "É a área de atuação médica que se ocupa do diagnóstico e tratamento clínico-cirúrgico das enfermidades relacionados à pele e aos anexos cutâneos (unhas, pelos, mucosas, cabelos).",
+            "medicos": [
+                {
+                    "id": 8,
+                    "nome": "Andreia Brenda Elaine",
+                    "cpf": "544.466.316-32",
+                    "crm": "38769-MG"
+                },
+                {
+                    "id": 7,
+                    "nome": "Bento José Moura",
+                    "cpf": "823.325.066-08",
+                    "crm": "79712-MG"
+                },
+                {
+                    "id": 17,
+                    "nome": "Iago Mário Costa",
+                    "cpf": "327.271.109-01",
+                    "crm": "15560-MG"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "especialidade": "CARDIOLOGIA",
+            "descricao": "Cardiologia é a área de atuação médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração e também do sistema circulatório. Avaliam pacientes com pressão alta, insuficiência cardíaca, colesterol alto e outras doenças relacionadas ao coração e à circulação sanguínea. Além disso, atua na prevenção indicando hábitos saudáveis para a saúde do coração.",
+            "medicos": [
+                {
+                    "id": 10,
+                    "nome": "Ian Nicolas Baptista",
+                    "cpf": "122.312.106-22",
+                    "crm": "86501-MG"
+                },
+                {
+                    "id": 4,
+                    "nome": "Fernando Cláudio Kaique Castro",
+                    "cpf": "748.706.436-00",
+                    "crm": "63288-MG"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "especialidade": "FISIOTERAPIA",
+            "descricao": "Essa área de atuação atua na prevenção e na reabilitação da capacidade física e funcional do paciente. O fisioterapeuta aplica terapias para tratar as doenças e lesões, empregando técnicas como massagens e exercícios.",
+            "medicos": [
+                {
+                    "id": 11,
+                    "nome": "Alessandra Silvana Renata",
+                    "cpf": "386.222.306-00",
+                    "crm": "66813-MG"
+                },
+                {
+                    "id": 12,
+                    "nome": "Cláudio Paulo César Lopes",
+                    "cpf": "748.874.166-87",
+                    "crm": "76074-MG"
+                },
+                {
+                    "id": 5,
+                    "nome": "Marli Isabelly Louise",
+                    "cpf": "861.651.666-28",
+                    "crm": "31343-MG"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "especialidade": "GINECOLOGIA",
+            "descricao": "Área de atuação que cuida da saúde da mulher, lidando com o diagnóstico e tratamento de doenças do sistema reprodutor feminino (vagina, útero e ovários);",
+            "medicos": [
+                {
+                    "id": 3,
+                    "nome": "Bernardo Antonio André Freitas",
+                    "cpf": "545.032.126-05",
+                    "crm": "86578-MG"
+                },
+                {
+                    "id": 13,
+                    "nome": "Analu Rita Melo",
+                    "cpf": "436.771.006-82",
+                    "crm": "38389-MG"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "especialidade": "OFTAMOLOGIA",
+            "descricao": "É uma área de atuação médica responsável por garantir a saúde dos olhos do paciente, diagnosticar e tratar possíveis doenças relacionadas à visão e seus anexos, como catarata, glaucoma, miopia, astigmatismo e vista cansada.",
+            "medicos": [
+                {
+                    "id": 16,
+                    "nome": "Iago Mateus Ramos",
+                    "cpf": "672.283.866-80",
+                    "crm": "93426-MG"
+                },
+                {
+                    "id": 4,
+                    "nome": "Fernando Cláudio Kaique Castro",
+                    "cpf": "748.706.436-00",
+                    "crm": "63288-MG"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "especialidade": "PEDIATRIA",
+            "descricao": "É a área de atuação dedicada a acompanhar o desenvolvimento e a saúde de crianças, adolescentes e pré-adolescentes.",
+            "medicos": [
+                {
+                    "id": 14,
+                    "nome": "Malu Bárbara",
+                    "cpf": "401.083.709-84",
+                    "crm": "47947-MG"
+                },
+                {
+                    "id": 6,
+                    "nome": "Fernando Pedro César Rocha",
+                    "cpf": "852.875.106-67",
+                    "crm": "29386-MG"
+                },
+                {
+                    "id": 15,
+                    "nome": "Victor Giovanni Breno da Mota",
+                    "cpf": "871.805.686-51",
+                    "crm": "92414-MG"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "especialidade": "PSIQUIATRIA",
+            "descricao": "É a área de atuação que lida com a prevenção, atendimento, diagnóstico e tratamento de doenças como a depressão, distúrbios de ansiedade, perturbações bipolares, psicoses, alterações do comportamento alimentar (anorexia e bulimia), etc.",
+            "medicos": [
+                {
+                    "id": 2,
+                    "nome": "Francisco Tiago Renato Pires",
+                    "cpf": "577.142.106-56",
+                    "crm": "63211-MG"
+                },
+                {
+                    "id": 1,
+                    "nome": "Marcos Vinicius Daniel Raimundo da Luz",
+                    "cpf": "765.103.076-18",
+                    "crm": "73208-MG"
+                }
+            ]
+        }
+    ]
+}
