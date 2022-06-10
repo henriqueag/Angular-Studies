@@ -10,6 +10,17 @@ import { Paciente } from './paciente.model';
 })
 export class AppComponent {
 
+    menuItems: MenuItems[] = [
+        {
+            label: 'Home',
+            link: '/content'
+        },
+        {
+            label: 'Clientes',
+            link: '/clientes'
+        }
+    ]
+
     pacientes$: Observable<Paciente[]>
     paciente$: Observable<Paciente | undefined>
     executouListar: boolean = false
@@ -40,3 +51,7 @@ export class AppComponent {
     }
 }
 
+export interface MenuItems {
+    label: string,
+    link: string
+}

@@ -1,4 +1,13 @@
-<div class="container">
+<nav class="navbar">
+    <a class="logo" [routerLink]="['/content']">My App</a>
+    <ul *ngFor="let item of menuItems">
+        <li>
+            <a class="nav-link" [routerLink]="item.link" [routerLinkActive]="['active']">{{ item.label }}</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+<!-- <div class="container">
     <div class="grid grid-template-col">
         <div class="col-6">
             <div class="card">
@@ -40,4 +49,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
