@@ -51,11 +51,13 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css",
                             "src/reset.css",
-                            "src/assets/bootstrap-grid.min.css"
+                            "src/styles.css",
+                            "src/assets/bootstrap.min.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "src/assets/bootstrap.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {

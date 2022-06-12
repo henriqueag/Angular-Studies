@@ -2,18 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ClientesRoutingModule } from './clientes-routing.module';
-import { ClientesPageComponent } from './pages/pacientes/clientes-page.component';
-import { ClienteDetailComponent } from './components/pacientes-details/cliente-detail.component';
+import { ClientesPageComponent } from './pages/clientes/clientes-page.component';
+import { ClienteDetailComponent } from './components/cliente-detail/cliente-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ClienteUpdateComponent } from './components/cliente-update/cliente-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ClienteDeleteComponent } from './components/cliente-delete/cliente-delete.component';
 
 
 @NgModule({
-  declarations: [
+    declarations: [
         ClientesPageComponent,
-        ClienteDetailComponent
-  ],
-  imports: [
-    CommonModule,
-    ClientesRoutingModule
-  ]
+        ClienteDetailComponent,
+        ClienteUpdateComponent,
+        ClienteDeleteComponent
+    ],
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        ClientesRoutingModule,
+        ReactiveFormsModule
+    ]
 })
 export class ClientesModule { }

@@ -1,0 +1,41 @@
+<h2>Informações do cliente</h2>
+<hr>
+<ng-container *ngIf="(cliente$ | async)?.nome != undefined; else notFound">
+    <form class="row g-3">
+        <div class="col-md-12">
+            <label for="inputNome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="inputNome" readonly [value]="(cliente$ | async)?.nome">
+        </div>
+        <div class="col-md-4">
+            <label for="inputCpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="inputCpf" readonly [value]="(cliente$ | async)?.cpf">
+        </div>
+        <div class="col-4">
+            <label for="inputRg" class="form-label">RG</label>
+            <input type="text" class="form-control" id="inputRg" readonly [value]="(cliente$ | async)?.rg">
+        </div>
+        <div class="col-4">
+            <label for="inputDataNascimento" class="form-label">Data nascimento</label>
+            <input type="text" class="form-control" id="inputDataNascimento" readonly [value]="(cliente$ | async)?.data_nasc">
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="text" class="form-control" id="inputEmail" readonly [value]="(cliente$ | async)?.email">
+        </div>
+        <div class="col-md-6">
+            <label for="inputTelefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="inputTelefone" readonly [value]="(cliente$ | async)?.celular">
+        </div>
+        <div class="col-md-12">
+            <label for="inputEndereco" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="inputEndereco" readonly [value]="(cliente$ | async)?.endereco">
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-primary me-3" (click)="updateCliente()">Editar</button>
+            <button type="submit" class="btn btn-warning" (click)="voltarInicio()">Voltar</button>
+        </div>
+    </form>
+</ng-container>
+<ng-template #notFound>
+    <h3>Cliente não encontrado</h3>
+</ng-template>
