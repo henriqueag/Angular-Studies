@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteUpdateComponent } from './components/cliente-update/cliente-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ClienteDeleteComponent } from './components/cliente-delete/cliente-delete.component';
+import { ClienteCreateComponent } from './components/cliente-create/cliente-create.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ClienteDeleteComponent } from './components/cliente-delete/cliente-dele
         ClientesPageComponent,
         ClienteDetailComponent,
         ClienteUpdateComponent,
-        ClienteDeleteComponent
+        ClienteDeleteComponent,
+        ClienteCreateComponent
     ],
     imports: [
         CommonModule,

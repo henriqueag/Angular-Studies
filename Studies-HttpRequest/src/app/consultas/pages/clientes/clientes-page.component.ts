@@ -15,7 +15,7 @@ export class ClientesPageComponent implements OnInit {
     constructor(private _serviceApi: ClientesSearchService) { }
 
     clientes$: Observable<Cliente[]>
-    isOpenModal: boolean = false
+    openModalDelete: string
 
     ngOnInit(): void {
         this.clientes$ = this._serviceApi.getAll()
@@ -33,5 +33,14 @@ export class ClientesPageComponent implements OnInit {
 
     getClienteId() {
         return this._clienteId
+    }
+
+    openModal() {
+        this.openModalDelete = `<cliente-delete
+                            data_bs_target="deleteOptionModal"
+                            [clienteId] = "getClienteId()"
+                        >
+                        </cliente-delete>`
+
     }
 }

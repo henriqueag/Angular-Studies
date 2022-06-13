@@ -30,4 +30,8 @@ export class ClientesSearchService {
     deleteCliente(clienteId: number) {
         return this._httpCliente.delete<Cliente>(`${ROUTE}/${clienteId}`)
     }
+
+    createCliente(cliente: Cliente) {
+        return this._httpCliente.post(ROUTE, cliente)
+    }
 }

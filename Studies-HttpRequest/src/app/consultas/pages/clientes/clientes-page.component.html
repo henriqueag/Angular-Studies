@@ -25,7 +25,7 @@
                     style="cursor: pointer;"
                     data-bs-toggle="modal"
                     data-bs-target="#deleteOptionModal"
-                    (click)="setClienteId(clienteIdCell)"
+                    (click)="openModal()"
                 >
                     <i class="fa-solid fa-trash-can" style="color: red">
                     </i>
@@ -38,8 +38,4 @@
     </tbody>
 </table>
 
-<cliente-delete
-        data_bs_target="deleteOptionModal"
-        [clienteId]="getClienteId()"
->
-</cliente-delete>
+<div [innerHTML]="openModalDelete"></div>
