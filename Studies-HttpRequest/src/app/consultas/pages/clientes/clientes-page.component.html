@@ -1,28 +1,3 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <h2 class="my-3">Listagem de clientes</h2>
 <hr>
 <table class="table table-bordered table-hover">
@@ -37,23 +12,34 @@
     </thead>
     <tbody>
         <tr *ngFor="let cliente of clientes$ | async">
-            <th scope="row" hidden #clienteId>{{ cliente.id }}</th>
+            <th scope="row" hidden #clienteIdCell>{{ cliente.id }}</th>
             <td>{{ cliente.nome }}</td>
             <td>{{ cliente.cpf }}</td>
             <td>{{ cliente.celular }}</td>
             <td class="td-options">
-                <a [routerLink]="'editar/' + clienteId.innerHTML" class="me-3">
+                <a [routerLink]="'editar/' + clienteIdCell.innerText" class="me-3">
                     <i class="fa-solid fa-file-pen" style="color: green">
                     </i>
                 </a>
-                <a class="me-3" style="cursor: pointer;" (click)="abrirOpcaoDelete()">
+                <a class="me-3"
+                    style="cursor: pointer;"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteOptionModal"
+                    (click)="setClienteId(clienteIdCell)"
+                >
                     <i class="fa-solid fa-trash-can" style="color: red">
                     </i>
                 </a>
-                <a [routerLink]="'detalhes/' + clienteId.innerHTML" class="me-3">
+                <a [routerLink]="'detalhes/' + clienteIdCell.innerText" class="me-3">
                     <i class="fa-solid fa-eye"></i>
                 </a>
             </td>
         </tr>
     </tbody>
 </table>
+
+<cliente-delete
+        data_bs_target="deleteOptionModal"
+        [clienteId]="getClienteId()"
+>
+</cliente-delete>

@@ -9,7 +9,7 @@ import { Paciente } from './paciente.model';
 })
 export class AppComponent {
 
-    menuItems: MenuItems[] = [
+    menuItems: any[] = [
         {
             label: 'Home',
             link: '/content'
@@ -19,38 +19,4 @@ export class AppComponent {
             link: '/clientes'
         }
     ]
-
-    pacientes$: Observable<Paciente[]>
-    paciente$: Observable<Paciente | undefined>
-    executouListar: boolean = false
-
-    constructor(private _apiRest: ApiRestService) { }
-
-
-    ngOnInit() {
-        this.pacientes$ = this._apiRest.getAllPacientes()
-        this.executouListar = true
-    }
-
-    listPatients() {
-        this.pacientes$ = this._apiRest.getAllPacientes()
-        this.executouListar = true
-    }
-
-    searchPatientById(value: any) {
-        this.paciente$ = this._apiRest.getPacienteById(value)
-            .pipe(catchError(error => { return of(error.message) }))
-        this.executouListar = false
-    }
-
-    searchPatientByCpf(value: any) {
-        this.paciente$ = this._apiRest.getPacienteByCpf(value)
-            .pipe(catchError(error => { return of(error.message) }))
-        this.executouListar = false
-    }
-}
-
-export interface MenuItems {
-    label: string,
-    link: string
 }

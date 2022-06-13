@@ -26,4 +26,8 @@ export class ClientesSearchService {
         }
         return this._httpCliente.put<Cliente>(`${ROUTE}/${clienteId}`, body, { headers: headers})
     }
+
+    deleteCliente(clienteId: number) {
+        return this._httpCliente.delete<Cliente>(`${ROUTE}/${clienteId}`)
+    }
 }

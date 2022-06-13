@@ -1,5 +1,3 @@
-import { Router } from '@angular/router';
-import { ClienteDeleteComponent } from './../../components/cliente-delete/cliente-delete.component';
 import { Observable, catchError, of } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ClientesSearchService } from '../../apis/clientes-search.service';
@@ -12,11 +10,12 @@ import { Cliente } from '../../models/cliente.model';
 })
 export class ClientesPageComponent implements OnInit {
 
-    clientes$: Observable<Cliente[]>
-    abriModalDelete: boolean = false
+    private _clienteId: number
 
-    constructor(private _serviceApi: ClientesSearchService,
-        private _router: Router) { }
+    constructor(private _serviceApi: ClientesSearchService) { }
+
+    clientes$: Observable<Cliente[]>
+    isOpenModal: boolean = false
 
     ngOnInit(): void {
         this.clientes$ = this._serviceApi.getAll()
@@ -28,10 +27,11 @@ export class ClientesPageComponent implements OnInit {
             )
     }
 
-    abrirOpcaoDelete() {
-        if (this.abriModalDelete)
-            this.abriModalDelete = false
-        else
-            this.abriModalDelete = true
+    setClienteId(value: HTMLTableCellElement) {
+        this._clienteId = parseInt(value.innerText)
+    }
+
+    getClienteId() {
+        return this._clienteId
     }
 }

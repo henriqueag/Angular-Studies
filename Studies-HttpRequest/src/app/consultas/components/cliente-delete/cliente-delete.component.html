@@ -1,16 +1,28 @@
-<div class="modal" tabindex="-1">
+<div class="modal fade"
+    [id]="data_bs_target"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="deleteOptionModalLabel"
+    aria-hidden="true"
+    >
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Exclusão de registro</h5>
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="deleteOptionModalLabel">Exclusão de cadastro</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <p>Informação para passar no modal</p>
+            <div>
+            <div class="modal-body" *ngIf="(cliente$ | async) as cliente">
+                <p class="fw-semibold">Você solicitou a exclusão do cadastro do seguinte cliente:</p>
+                <p><strong>Nome:</strong> {{ cliente.nome }}</p>
+                <p><strong>CPF:</strong> {{ cliente.cpf }}</p>
+                <p class="fw-semibold">Deseja concluir a operação?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="deleteCliente()">Excluir</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
             </div>
         </div>
     </div>

@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" [routerLink]="['/content']">My App</a>
@@ -18,46 +17,3 @@
 <div class="container mt-2">
     <router-outlet></router-outlet>
 </div>
-<!-- <div class="container">
-    <div class="grid grid-template-col">
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header">
-                    <div class="form-title">
-                        <p>Formulário de busca</p>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <section class="search-form">
-                        <label for="busca">Informe o id do paciente aqui</label>
-                        <input type="text" id="busca" class="inputText" #inputText>
-                        <div class="buttons">
-                            <button class="btn btn-list" (click)="listPatients()">Listar</button>
-                            <button class="btn btn-search" (click)="searchPatientById(inputText.value)">Busca por
-                                id</button>
-                            <button class="btn btn-search" (click)="searchPatientByCpf(inputText.value)">Buscar por
-                                cpf</button>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card-result">
-                <div class="card-header">
-                    <div class="form-title">
-                        <p>Resultado da busca</p>
-                    </div>
-                </div>
-                <div class="card-body-result">
-                    <ng-container *ngIf="executouListar; else buscaPorId">
-                        <textarea id="text-result" [value]="pacientes$ | async | json"></textarea>
-                    </ng-container>
-                    <ng-template #buscaPorId>
-                        <textarea id="text-result" [value]="paciente$ | async | json"></textarea>
-                    </ng-template>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->

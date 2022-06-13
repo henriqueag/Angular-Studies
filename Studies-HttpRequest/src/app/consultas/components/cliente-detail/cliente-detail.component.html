@@ -1,34 +1,34 @@
 <h2>Informações do cliente</h2>
 <hr>
-<ng-container *ngIf="(cliente$ | async)?.nome != undefined; else notFound">
+<ng-container *ngIf="(cliente$ | async) as cliente; else loading">
     <form class="row g-3">
         <div class="col-md-12">
             <label for="inputNome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inputNome" readonly [value]="(cliente$ | async)?.nome">
+            <input type="text" class="form-control" id="inputNome" readonly [value]="cliente?.nome">
         </div>
         <div class="col-md-4">
             <label for="inputCpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="inputCpf" readonly [value]="(cliente$ | async)?.cpf">
+            <input type="text" class="form-control" id="inputCpf" readonly [value]="cliente?.cpf">
         </div>
         <div class="col-4">
             <label for="inputRg" class="form-label">RG</label>
-            <input type="text" class="form-control" id="inputRg" readonly [value]="(cliente$ | async)?.rg">
+            <input type="text" class="form-control" id="inputRg" readonly [value]="cliente?.rg">
         </div>
         <div class="col-4">
             <label for="inputDataNascimento" class="form-label">Data nascimento</label>
-            <input type="text" class="form-control" id="inputDataNascimento" readonly [value]="(cliente$ | async)?.data_nasc">
+            <input type="text" class="form-control" id="inputDataNascimento" readonly [value]="cliente?.data_nasc">
         </div>
         <div class="col-md-6">
             <label for="inputEmail" class="form-label">Email</label>
-            <input type="text" class="form-control" id="inputEmail" readonly [value]="(cliente$ | async)?.email">
+            <input type="text" class="form-control" id="inputEmail" readonly [value]="cliente?.email">
         </div>
         <div class="col-md-6">
             <label for="inputTelefone" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputTelefone" readonly [value]="(cliente$ | async)?.celular">
+            <input type="text" class="form-control" id="inputTelefone" readonly [value]="cliente?.celular">
         </div>
         <div class="col-md-12">
             <label for="inputEndereco" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="inputEndereco" readonly [value]="(cliente$ | async)?.endereco">
+            <input type="text" class="form-control" id="inputEndereco" readonly [value]="cliente?.endereco">
         </div>
         <div class="col-12">
             <button type="button" class="btn btn-primary me-3" (click)="updateCliente()">Editar</button>
@@ -36,6 +36,9 @@
         </div>
     </form>
 </ng-container>
-<ng-template #notFound>
-    <h3>Cliente não encontrado</h3>
+<ng-template #loading>
+    <div class="d-flex align-items-center">
+        <strong>Loading...</strong>
+        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </div>
 </ng-template>
