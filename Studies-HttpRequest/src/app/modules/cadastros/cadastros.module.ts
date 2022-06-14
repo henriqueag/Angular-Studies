@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ClientesRoutingModule } from './clientes-routing.module';
+import { CadastrosRoutingModule } from './cadastros-routing.module';
 import { ClientesPageComponent } from './pages/clientes/clientes-page.component';
 import { ClienteDetailComponent } from './components/cliente-detail/cliente-detail.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,8 +22,8 @@ import { ClienteCreateComponent } from './components/cliente-create/cliente-crea
     imports: [
         CommonModule,
         HttpClientModule,
-        ClientesRoutingModule,
+        CadastrosRoutingModule,
         ReactiveFormsModule
     ]
 })
-export class ClientesModule { }
+export class CadastrosModule { }

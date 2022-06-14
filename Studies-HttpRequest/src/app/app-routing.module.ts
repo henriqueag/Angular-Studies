@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './modules/authentication/login/login.component';
 
 const routes: Routes = [
+    // {
+    //     path: '',
+    //     redirectTo: 'content',
+    //     pathMatch: 'full'
+    // },
     {
-        path: '',
-        redirectTo: 'content',
-        pathMatch: 'full'
+        path: 'login',
+        loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
     },
     {
         path: 'content',
-        loadChildren: () => import('./content/content.module').then(m => m.ContentModule)
+        loadChildren: () => import('./modules/content/content.module').then(m => m.ContentModule)
     },
     {
         path: 'clientes',
-        loadChildren: () => import('./consultas/clientes.module').then(m => m.ClientesModule)
+        loadChildren: () => import('./modules/cadastros/cadastros.module').then(m => m.CadastrosModule)
     }
 ];
 

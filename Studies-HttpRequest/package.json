@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "startApi": "json-server --watch src/assets/api/db.json",
+    "startApi": "json-server --watch src/assets/api/db.json -m ./node_modules/json-server-auth",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -39,6 +39,8 @@
     "@types/node": "^12.11.1",
     "@types/uuid": "^8.3.4",
     "jasmine-core": "~4.0.0",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",

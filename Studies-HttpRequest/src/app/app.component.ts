@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { catchError, Observable, of } from 'rxjs';
-import { ApiRestService } from './api-rest.service';
-import { Paciente } from './paciente.model';
 
 @Component({
     selector: 'app-root',

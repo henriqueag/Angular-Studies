@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "email": "henrique.aguiar@gmail.com",
+      "password": "$2a$10$4G6m5Pae7NBSxdHXNznSXuuXyImAEQms2kOZiGI5PRaYGKD1apSG6",
+      "firstname": "Henrique",
+      "lastname": "Aguiar",
+      "age": 23,
+      "id": 1
+    }
+  ],
   "clientes": [
     {
       "id": 2,

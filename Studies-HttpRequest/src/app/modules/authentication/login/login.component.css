@@ -1,0 +1,24 @@
+.center {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 60%;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.45);
+}
+
+.login-title {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #73777baf;
+}

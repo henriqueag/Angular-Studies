@@ -11,6 +11,13 @@
                     <a class="nav-link" [routerLink]="item.link" [routerLinkActive]="['active']">{{ item.label }}</a>
                 </li>
             </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']">
+                        Sign-in<i class="fa-solid fa-user mx-3"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
